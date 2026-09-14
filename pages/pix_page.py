@@ -13,8 +13,8 @@ class PixPage:
         self.send_pix_button.click()
 
     def assert_pix_successfull(self):
-        expect(self.page.get_by_role("heading", name="Transação Realizada com")).to_be_visible()
-        expect(self.page.get_by_text("A transação foi concluída com")).to_be_visible()
+        expect(self.page.get_by_role("heading", name="Transação Realizada com Sucesso!")).to_be_visible()
+        expect(self.page.get_by_text("A transação foi concluída com sucesso. Você pode voltar para a página principal e continuar suas operações.")).to_be_visible()
 
     
 
