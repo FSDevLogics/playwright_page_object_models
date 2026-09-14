@@ -1,5 +1,9 @@
 import pytest
+from pages.common_page import CommonPage
 from pages.login_page import LoginPage
+from pages.homepage import Homepage
+from pages.pix_page import PixPage
+from pages.loan_page import LoanPage
 
 @pytest.fixture
 def page(page):
@@ -8,5 +12,21 @@ def page(page):
     return page
 
 @pytest.fixture
+def common_page(page):
+    return CommonPage(page)
+
+@pytest.fixture
 def login_page(page):
     return LoginPage(page)
+
+@pytest.fixture
+def homepage(page):
+    return Homepage(page)
+
+@pytest.fixture
+def pix_page(page):
+    return PixPage(page)
+
+@pytest.fixture
+def loan_page(page):
+    return LoanPage(page)
